@@ -1,6 +1,5 @@
 API Automation Framework with Rest Assured and JAVA
 
-
 Instructions
 -------------
 JDK 1.8+ (make sure Java class path is set)
