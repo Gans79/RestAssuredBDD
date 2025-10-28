@@ -45,5 +45,5 @@ jobs:
           name: cucumber-report
           path: |
             target/cucumber.html
-            target/cucumber-reports/*.html
-            target/cucumber-reports/**/*.html
+            target/cucumber-report/*.html
+            target/cucumber-report/**/*.html
