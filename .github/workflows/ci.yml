@@ -37,9 +37,13 @@ jobs:
       - name: Build with Maven
         run: mvn clean test
 
-      # Step 5: Upload build artifacts (optional)
-      - name: Upload artifact
+      # Step 5: Upload the Cucumber HTML report
+      - name: Upload Cucumber HTML Report
+        if: always()  # ensures upload even if tests fail
         uses: actions/upload-artifact@v4
         with:
-          name: build-artifact
-          path: target/*.jar
+          name: cucumber-report
+          path: |
+            target/cucumber.html
+            target/cucumber-reports/*.html
+            target/cucumber-reports/**/*.html
